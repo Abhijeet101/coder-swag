@@ -37,12 +37,15 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="xWJ-C9-mun">
                                                     <rect key="frame" x="0.0" y="3" width="375" height="121"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="375" id="9M2-qe-LgL"/>
+                                                        <constraint firstAttribute="height" constant="121" id="G2Y-oE-yUc"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q19-4z-Nkg">
-                                                    <rect key="frame" x="132.5" y="45" width="110" height="37"/>
+                                                    <rect key="frame" x="141" y="45" width="93" height="37"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="37" id="Ewq-ax-lPv"/>
-                                                        <constraint firstAttribute="width" constant="110" id="eZN-ni-C0z"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,6 +63,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryImage" destination="xWJ-C9-mun" id="jt5-Hg-EqP"/>
+                                            <outlet property="categoryImageViewWidth" destination="9M2-qe-LgL" id="IsZ-R3-ZAj"/>
                                             <outlet property="categoryTitle" destination="q19-4z-Nkg" id="4u6-cd-diP"/>
                                             <segue destination="UFa-Hp-opx" kind="show" identifier="ProductsVC" id="OIU-QI-7Pt"/>
                                         </connections>
@@ -74,6 +78,7 @@
                             <constraint firstItem="xS0-6p-ktZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MoD-ea-9zU"/>
                             <constraint firstItem="xS0-6p-ktZ" firstAttribute="top" secondItem="KE4-hQ-7Za" secondAttribute="bottom" constant="16" id="UIb-mT-wqm"/>
                             <constraint firstAttribute="bottom" secondItem="xS0-6p-ktZ" secondAttribute="bottom" constant="10" id="fPj-hh-MRb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KE4-hQ-7Za" secondAttribute="trailing" symbolic="YES" id="g53-Xh-LQr"/>
                             <constraint firstItem="KE4-hQ-7Za" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wXR-0x-2Qf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -111,7 +116,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="g89-1U-wiu" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="g89-1U-wiu" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="174" height="240"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
